@@ -26,5 +26,16 @@
             <?=dadosAutor()?>
         </article>
     </section>
+
+    <hr>
+     <h2>Função com retorno de dados</h2>
+     <?php
+     function dadosCurso(){
+        //return "Técnico em informática para internet";
+        return "<b>Fritar linguiça</b>";
+     }
+     ?>
+     <p>Estamos no curso de <?=dadosCurso()?></p>
+     <p><?=dadosCurso()?> é ministrado no Senac Penha.</p>
 </body>
 </html>

@@ -51,7 +51,7 @@
      ?>
      <!-- chamando e exibindo diretamente o retorno -->
      <p>Resultado 1: <?=soma(10, 20, 5)?></p>
-     <p>Resultado 1: <?=soma(23, 84, 1000.75)?></p>
+     <p>Resultado 2: <?=soma(23, 84, 1000.75)?></p>
      
      <?php
      // chamando e guardando o retorno

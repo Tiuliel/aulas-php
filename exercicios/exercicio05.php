@@ -49,27 +49,27 @@
         [
             "Nome" => "Motocovisky",
             "nota1" => 10,
-            "nota2" => 8,
+            "nota2" => 8
         ],
         [
             "Nome" => "Valeuska",
             "nota1" => 10,
-            "nota2" => 9,
+            "nota2" => 9
         ],
         [
             "Nome" => "MMs",
             "nota1" => 9,
-            "nota2" => 8,
+            "nota2" => 8
         ],
         [
             "Nome" => "BabaRosa",
             "nota1" => 5,
-            "nota2" => 8,
+            "nota2" => 8
         ],
         [
             "Nome" => "Eliandro",
             "nota1" => 5,
-            "nota2" => 6,
+            "nota2" => 6
         ],
         
     

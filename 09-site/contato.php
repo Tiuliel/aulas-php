@@ -1,5 +1,5 @@
 <?php
-$pagina = "Contato";
+$titulo = "Contato";
 require "includes/cabecalho.php"
 ?>
 

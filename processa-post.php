@@ -23,15 +23,27 @@ if( empty ($_POST["nome"]) || empty($_POST["email"])){
 
     $nome = $_POST["nome"];
     $email = $_POST["email"];
+    $idade = $_POST["idade"];
     $mensagem = $_POST["mensagem"];
+    $interesses = $_POST["interesses"];
+    ?>
+    <?php
+    if (isset($interesses)){ ?>
+
+
+    <?php} 
     ?>
 
     <h2>Dados:</h2>
     <ul>
-        <li>Nome: </li>
-        <li>E-mail: </li>
-        <li>mensagem: </li>
-        
+        <li>Nome: <?=$nome?></li>
+        <li>E-mail: <?=$email?></li>
+        <li>idade: <?=$idade?></li>
+        <li>interesses: <?= implode(",", $interesses)?></li>
+<!-- Se a variável mensagem NÃO ESTIVER VAZIA, mostre o <li> com a mensagem -->
+        <?php if(!empty($mensagem)) {?>
+        <li>mensagem: <?=$mensagem?></li>
+        <?php } ?>
     </ul>
     <?php
     }

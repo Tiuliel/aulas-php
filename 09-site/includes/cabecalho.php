@@ -8,7 +8,20 @@ case "cursos.php": $titulo = "Cursos"; break;
 case "duvidas.php": $titulo = "Dúvidas"; break;
 default: $titulo = "Contato"; break;
 
+
 }
+
+/* Função match()
+Disponível a partir do PHP versão 8
+
+ $titulo = match($pagina) {
+        "index.php" => "Página inicial",
+        "cursos.php" => "Cursos",
+        "duvidas.php" => "Dúvidas",
+        default => "Contato"
+    }
+
+*/
 ?>
 
 

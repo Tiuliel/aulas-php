@@ -22,13 +22,21 @@
 
 
     } else {
+//$nome = filter_var($_POST["nome], FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $nome = $_POST["nome"];
-        $email = $_POST["email"];
-        $idade = $_POST["idade"];
-        $mensagem = $_POST["mensagem"];
-        $interesses = $_POST["interesses"] ?? [];
+        $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
 
+        $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+
+        $idade = filter_input(INPUT_POST, "idade", FILTER_SANITIZE_NUMBER_INT);
+
+        $mensagem = filter_input(INPUT_POST, "mensagem", FILTER_SANITIZE_SPECIAL_CHARS);
+
+        //$interesses = $_POST["interesses"] ?? [];
+$interesses = filter_var_array(
+    $_POST["interesses"] ?? [],
+    FILTER_SANITIZE_SPECIAL_CHARS
+);
 
     ?>
 
@@ -40,7 +48,16 @@
             <li>idade: <?= $idade ?></li>
             <?php if (!empty($interesses)) { ?>
                 <li>interesses: <?= implode(",", $interesses) ?></li>
-            <?php } ?>
+
+
+                <li>interesses: 
+                    <ul>
+                        <?php foreach ( $interesses as $interesse ) { ?>
+                        <li> <?= $interesse ?></li>
+                        <?php } ?>
+                    </ul>
+                </li>
+                <?php } ?>
 
             <!-- Se a variável mensagem NÃO ESTIVER VAZIA, mostre o <li> com a mensagem -->
             <?php if (!empty($mensagem)) { ?>

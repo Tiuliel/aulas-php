@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 06</title>
 
-    <head>
+    <style>
+        h1{
+            text-align: center;
+            color: red;
+            text-shadow: black 1px 1px 15px;
+        }
+
+        form{
+            text-align: center;
+        }
+
+        label{
+            font-weight: bold;
+        }
+    </style>
         <title>Cadastro de Produtos</title>
     </head>
 
@@ -39,5 +53,6 @@
         <label for="descricao">Descrição:</label><br>
         <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea><br><br>
 
-        <input type="submit" value="Cadastrar Produto">
+        <input type="submit" value="Cadastrar Produto" name="enviar">
+
     </form>

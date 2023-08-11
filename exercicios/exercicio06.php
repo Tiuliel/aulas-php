@@ -32,6 +32,7 @@
 
         <label for="fabricante">Fabricante:</label>
         <select id="fabricante" name="fabricante">
+            <option value=""></option>
             <?php
             $fabricantes = array("Dell", "HP", "APPLE", "POSITIVO");
             foreach ($fabricantes as $fabricante) { ?>

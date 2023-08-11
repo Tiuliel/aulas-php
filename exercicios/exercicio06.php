@@ -7,6 +7,7 @@
     <title>Exercício 06</title>
 
     <style>
+        /* CSS basicão, mas correto. */
         h1{
             text-align: center;
             color: red;
@@ -33,6 +34,7 @@
         <label for="fabricante">Fabricante:</label>
         <select id="fabricante" name="fabricante">
             <?php
+            /* PHP correto, mas é bom deixar um <option> vazio antes do PHP, ou seja, direto no HTML mesmo. */
             $fabricantes = array("Dell", "HP", "APPLE", "POSITIVO");
             foreach ($fabricantes as $fabricante) { ?>
                 <option><?= $fabricante ?></option>;

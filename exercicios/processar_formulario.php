@@ -10,11 +10,17 @@
 <body>
     <main>
         <?php
+/* Nem precisava deste primeiro if.
+Afinal, você já tinha definido o action do formulário (indicando que
+os dados viriam pra cá) */        
 if (isset($_POST["enviar"])) 
         if (!empty($_POST["produto"]) || !empty($_POST["preco"])) {
 
             $produto = filter_input(INPUT_POST, "produto", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
+            /* Aqui no $preco, o ideal é sanitizar em vez de validar.
+            Você deverá usar dois filtros: um para sanitização de float e outro para permitir dígitos/casas
+            decimais. */
             $filtro_preco = filter_input(INPUT_POST, "preco", FILTER_VALIDATE_FLOAT);
             $preco = "R$" . number_format($filtro_preco, 2, ",", ".");
 
@@ -30,7 +36,10 @@ if (isset($_POST["enviar"]))
             <p>Disponibilidade: <?= $disponibilidade ?></p>
             <p>Descrição: <?= $descricao ?></p>
         <?php
-        }
+        } /* faltou fazer um else aqui né?
+        Sua programação do empty está certa, mas quando acontece
+        de não preencher os campos obrigatórios, a tela fica em branco.
+        Então, o usuário não saberia o que aconteceu e nem o que fazer. */
         ?>
 
 
